@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +33,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.credits {
+  color:black;
+  background:white;
+  padding:15px;
+  border-radius: 5px;
+  margin: 15px;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

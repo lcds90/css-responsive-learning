@@ -33,12 +33,12 @@ Você possui duas opções:
 
 ### Você será capaz de:
 
+- Utilizar o devtools como ferramenta para estilizar o layout.
 - Utilizar unidades corretas e fluidas para facilitar layouts responsivos.
-- Utilizar técnica mobile-first.
 - Utilizar `CSS Grid` para realizar layouts complexos.
-- Utilizar a propriedade e entender `position` com `absolute` e `relative`.
+- Quando utilizar `position` com `absolute` e `relative` e display: `flex` ou `grid`.
+- Utilizar técnica mobile-first.
 - Utilizar media queries para se adaptar com dispositivos gerais.
-- Utilizar o devtools como complemento para estilizar o layout.
 
 * * *
 
@@ -83,7 +83,8 @@ Após a realização, redimensione a janela e perceba a diferença entre como os
 
 Um ponto importante é perceber que `em` se relaciona somente com a div anterior, vimos que na sua primeira definição da classe foi deifnido `14px` ou seja, `2em` resulta em `28px` e `3em` resulta `56px`, enquanto `rem` só se preocupa em relação ao que foi definido no `html`, por padrão é 16px
 
-![Imagem no devtools]()
+[<img src="./assets/fontsize.gif" width="500"/>](assets/fontsize.gif 'Gif mostrando tamanho da fonte padrão no navegador através do dev tools')
+
 
 * * *
 

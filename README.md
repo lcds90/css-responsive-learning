@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Boas vindas ao repositório do projeto de conhecimento a respeito do CSS Grid!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sumário
 
-## Available Scripts
+- [O que vamos aprender?](#-o-que-vamos-aprender)
+- [Você será capaz de](#voce-sera-capaz-de)
+- [Porque isso é importante?](#porque-isso-e-importante)
+- [Conteúdos](#conteudos)
+  - [CSS Grid](#css-grid)
+    - [Introdução](#introducao-grid)
+- [Vamos praticar!](#vamos-praticar)
+- [Recursos Adicionais](#recursos-adicionais)
 
-In the project directory, you can run:
+* * *
 
-### `yarn start`
+## O que vamos aprender?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Nesse projeto iremos desenvolver a capacidade de construir layouts utilizando a ténica que é disponibilizada através do modo de grade(grid), aprender sobre posicionamentos, e com a utilização das media queries para criarmos layouts que sejam complexos porém com facilidade e consistência entre os navegadores.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Siga as instruções indicadas nos arquivos junto com o material de referência para entendimento do conteúdo.
 
-### `yarn test`
+### Antes de começar a desenvolver:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Você possui duas opções: 
+- Realizar um clone do repositório e realizar um `push`.
+- Realizar um `fork` deste repositório. (Caso queira consigo acompanhar mais facilmente caso tenha alguma dificuldade.)
 
-### `yarn build`
+* * *
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Você será capaz de:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Utilizar `CSS Grid` para realizar layouts complexos.
+- Utilizar a propriedade e entender `position` com `absolute` e `relative`.
+- Utilizar media queries para se adaptar com dispositivos gerais.
+- Utilizar o devtools como complemento para estilizar o layout.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* * *
 
-### `yarn eject`
+## Conteudos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### CSS Grid
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<details>
+<summary>Conteúdo</summary>
 
-## Learn More
+#### Introdução <a id="introducao-grid"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+</details>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Referências
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [CSS Grid - Responsive Trash Course](https://www.youtube.com/watch?v=SPFDLHNm5KQ)
+- [Desvendando o CSS Grid na prática | Mayk Brito](https://www.youtube.com/watch?v=HN1UjzRSdBk)
+- [Responsividade na Prática | Masterclass #08](https://www.youtube.com/watch?v=H91DhKPjhPk)
+- [The FR unit — Fractional units in CSS grid](https://www.youtube.com/watch?v=Dp7kOWhAjuo)
+- [Media Queries e Breakpoints: o Básico e Fundamental](https://www.youtube.com/watch?v=gYak6y7rbRw)
+- [Entendendo sobre position no CSS](https://www.youtube.com/watch?v=Y7NeqpwLM2g)
+- [CSS Grid Layout e Flexbox - Quando Utilizar](https://www.youtube.com/watch?v=x-4z_u8LcGc&)

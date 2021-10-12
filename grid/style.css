@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #61dafb;
+  width:100vw;
+  min-height:100vh;
+  max-width:100%;
+}
+
+section {
+  width: 80%;
+  height:100%;
+  margin:2vh auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+article {
+  background: white;
+  border: grey 5px solid;
+  width: 50%;
+  margin: 15px;
+}
+
+.exercise-1 {
+  display: grid;
+  background: black;
+  color: white;
+}
+
+.exercise-2 {
+  background: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.exercise-3 {
+  background: purple;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr;
+  /* Será somente uma linha, os novos itens irão surgir como uma nova coluna */
+}
+
+.exercise-4-and-5 {
+    background:darkslateblue;
+    display:grid;
+    grid-template-columns: 20vw repeat(3, 1fr) 100px;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 5vw;
+}
+
+.exercise-6 {
+    background: palevioletred;
+    display:grid;
+    /* shorthand do grid-template-columns e rows = linha / coluna */
+    grid: 1fr / repeat(4, 1fr);
+    padding:25px;
+}
+
+.exercise-6 > article {
+    width:100%;
+}
+
+.exercise-6 > article:nth-of-type(2){
+    grid-column: span 3;
+}
+
+.exercise-6 > article:nth-of-type(7){
+    grid-row: span 4;
+}
+
+.exercise-6 > article:nth-of-type(13){
+    grid-column: span 2;
+    grid-row: span 3;
+}

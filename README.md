@@ -31,14 +31,14 @@ Você possui duas opções:
 
 * * *
 
-### Você será capaz de:
+### Iremos exercitar os seguinte conceitos
 
-- Utilizar o devtools como ferramenta para estilizar o layout.
 - Utilizar unidades corretas e fluidas para facilitar layouts responsivos.
 - Utilizar `CSS Grid` para realizar layouts complexos.
 - Quando utilizar `position` com `absolute` e `relative` e display: `flex` ou `grid`.
 - Utilizar técnica mobile-first.
 - Utilizar media queries para se adaptar com dispositivos gerais.
+- Juntar os conceitos aplicados relacionado á resposnvidade em uma aplicação.
 
 * * *
 
@@ -83,8 +83,7 @@ Após a realização, redimensione a janela e perceba a diferença entre como os
 
 Um ponto importante é perceber que `em` se relaciona somente com a div anterior, vimos que na sua primeira definição da classe foi deifnido `14px` ou seja, `2em` resulta em `28px` e `3em` resulta `56px`, enquanto `rem` só se preocupa em relação ao que foi definido no `html`, por padrão é 16px
 
-[<img src="./assets/fontsize.gif" width="500"/>](assets/fontsize.gif 'Gif mostrando tamanho da fonte padrão no navegador através do dev tools')
-
+[<img src="./assets/fontsize.gif" width="100%"/>](assets/fontsize.gif 'Gif mostrando tamanho da fonte padrão no navegador através do dev tools')
 
 * * *
 
@@ -114,12 +113,186 @@ Caso tenha dúvida, lembre-se:
 
 Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_priorize sempre em simplificar seu código_ 😃), mas o conteúdo abordado será focado exclusivamente na utilização do `display: grid`
 
+* * *
+
+#### Conceitos Fundamentais
+
+##### 01 - Fundamentos
+
+- Todos nodes filhos de um elemento com display:grid, sempre irão ser items de grid explicitamente
+- A declaração direta é chamada de implicit grid
+- Utilizando a propriedade `auto` ele se auto ajusta com espaço que lhe fica disponível
+- Os números em relação ao grid não significa a coluna em si, mas sim o começo e aonde termina
+
+```html
+
+<section class="container"> <!-- Elemento com grid aplicado -->
+    <article></article> <!-- Item do grid -->
+    <article></article> <!-- Item do grid -->
+    <article></article> <!-- Item do grid -->
+</section>
+
+```
+
+```css
+ .exemplo {
+    display:grid;
+ }
+```
+
+##### 02 - Implicito X Explicito
+
+- O modo explicito acontece quando há declaração EXATAMENTE do que o elemento precisa distribuir para os itens do grid.
+- O modo implicito acontece quando o navegador precisa alocar um item extra, e já foi ocupado toda a definição anterior. Exemplo: 5 itens com somente duas colunas, uma linha extra será criada. Então, a implicidade ocorre no momento da criação da segunda linha
+(grid-row) para encaixar os elementos.
+- O tamanho gerado por padrão da implicidade é `1fr`, porém pode ser manipulada com auto-rows/columns.
+
+```css
+ .exemplo {
+    display:grid;
+    grid-template-columns: 1fr 100px;
+    grid-auto-rows: 250px;
+ }
+```
+
+##### 03 - Auto Flow
+
+- O auto flow controla onde a implicidade anterior ocorre, determina se o elemento extra irá se ajuntar como uma nova coluna ou linha do grid.
+- Por padrão, ele sempre irá adicionar uma nova linha para ocorrer a implicidade.
+
+```css
+ .exemplo {
+    display:grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* Será somente uma linha, os novos itens irão surgir como uma nova coluna */
+ }
+```
+
+##### 04 - Definição de tamanhos
+
+- Não utilize a definição do grid com %,
+- Porque a porcentagem é relacionado ao algo que tenha como pai algo pré-definido
+> container pai como width: 100vw, no node filho pode-se usar 50% (50vw)
+- Opte pelas medidas de frações, pois elas realizam o calculo automatico para nós
+- A definição do grid-auto-rows por padrão é 1fr ao declarar o display: grid
+- A propriedade `auto` ocupa somente o espaço restante referente aos calculos dado.
+
+[Vídeo explicativo sobre o conceito de utilizar fr](https://www.youtube.com/watch?v=Dp7kOWhAjuo)
+
+```css
+ .exemplo {
+    display:grid;
+    grid-template-columns: 2fr auto 200px;
+    /*  podemos combinar a utilização com outros valores */
+ }
+```
+
+##### 05 - Repeat
+
+- A função repeat evita repetição desnecessária em relação a quantidade de elementos definidos
+- Podemos utilizar da melhor forma que for convecional ao código.
+
+
+
+```css
+ .exemplo {
+    display:grid;
+    grid-template-columns: 2fr repeat(3, 1fr auto) 200px;
+    grid-template-rows: repeat(2, 1fr);
+    /*  
+    grid-template-columns: 2fr 1fr auto 1fr auto 1fr auto 200px;
+    grid-template-rows: 1fr 1fr;
+    */
+ }
+```
+##### 06 - Tamanho de itens do grid
+
+- Não podemos definir o width explicito no grid item
+- Pois todos os itens são afetados pela explicidade
+- Para alterar a quantidade de colunas ocupadas, utilizados a propriedade span
+> coluna: grid-column / linha: grid-row
+
+```css
+ .exemplo {
+   grid-column: span 3;
+   grid-row: span 2;
+   height:100%;
+ }
+```
+
+##### 07 - 
+
+* * *
+
 #### Mão na massa! <a id="mao-na-massa-grid"></a>
+
+Cada pasta `exercise` contém um arquivo `index.html` e `style.css` `grids/exercises1/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`.
+
+Unidades que você irá utilizar e suas abordagens:
+- **fr**: Relacionado á fração do elemento disponível.
+
+Após a realização, redimensione a janela e perceba a diferença entre como os valores absolutos e relativos reagem em relação ao espaço disponível.
+
+Um ponto importante é perceber que `em` se relaciona somente com a div anterior, vimos que na sua primeira definição da classe foi deifnido `14px` ou seja, `2em` resulta em `28px` e `3em` resulta `56px`, enquanto `rem` só se preocupa em relação ao que foi definido no `html`, por padrão é 16px
+
+
+### Conceitos de responsividade
+
+Layout Fixo
+`px` - Pixels
+
+Layout Fluido
+`%` - Porcentagem
+`auto` - Automática
+`vh` - Viewport Height
+`vw` - Viewport Width
+`fr` - Fração (_Utilize no grid_)
+
+Textos fixos
+`1px` = 0.75pt
+`16px` = 12pt
+
+Texto fluidos
+`em` - multiplicado pelo pai 
+`rem` - multiplicado pelo root (body, no devtools em `computed` podemos inspecionar o font-size que vai estar 16px)
+
+Esse metadado é responsável para distribuir os valores para nosso css
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+Reset em valores padrões do CSS
+
+```css
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   outline: 0;
+}
+```
+
+
+Tecnica de fonte responsiva
+```css
+   /* A cada 1rem será considerada 10px */
+   html {
+      font-size: 62.5%
+   }
+   /* Isso serve para ter uma visualização melhor no código e fixar um padrão no desenvolvimento */
+   body {
+      font-size: 1.6rem
+   }
+```
+
+Opte sempre por imagens SVG quando há opção pois elas oferecem alta resolução independente do dispositivo.
 
 ### Referências
 
 - [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-
 - [CSS Grid - Responsive Trash Course](https://www.youtube.com/watch?v=SPFDLHNm5KQ)
 - [Desvendando o CSS Grid na prática | Mayk Brito](https://www.youtube.com/watch?v=HN1UjzRSdBk)
 - [Responsividade na Prática | Masterclass #08](https://www.youtube.com/watch?v=H91DhKPjhPk)
@@ -130,3 +303,4 @@ Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_pr
 - [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Layout com tabela e float](https://www.tutorialrepublic.com/html-tutorial/html-layout.php)
 - [CSS Grid vs Flexbox](https://x-team.com/blog/css-grid-vs-flexbox/)
+- [Curso CSS Grid](https://courses.wesbos.com/) 

@@ -7,8 +7,8 @@
 - [Porque isso é importante?](#porque-isso-e-importante)
 - [Conteúdos](#conteudos)
   - [Unidades absolutas e relativas](#unidade-absolutas-e-relativas)
-    - [Introdução](#introducao-grid)
-    - [Mão na massa](#mao-na-massa-grid)
+    - [Introdução](#introducao-units)
+    - [Mão na massa](#mao-na-massa-units)
   - [CSS Grid](#css-grid)
     - [Introdução](#introducao-grid)
     - [Mão na massa](#mao-na-massa-grid)
@@ -49,24 +49,43 @@ Vamos nos aprofundar na mágia do CSS \o/.
 
 ### Unidades absolutas e relativas
 
+#### Introdução <a id="introducao-units"></a>
+
 Você já deve ter percebido que no desenvolvimento web, trabalhamos com bastante unidade de medidas. O príncipio na responsividade é trabalharmos com unidades relativas, pois elas oferecem melhor flexibilidade para construir nosso layout. Mas vamos entender cada uma que podemos utilizar em nossa aplicação.
 
-#### Unidades absolutas
+##### Unidades absolutas
 
 > cm, mm, Q, in, pc, pt, px
 
 Unidades absolutas não mudam pois não são relativas ao qualquer elemento pré-definido, e sempre serão o mesmo tamanho ao qual foi definido. A opção mais comum será a unidade `px`.
 
-#### Unidades relativas
+##### Unidades relativas
 
 > em, ex, ch, rem, lh, vw, vh, vmin, vmax
 
 Unidades relativas dependem de algo pré-definido, seja um elemento pai ou largura/altura disponível do dispositivo que a aplicação está sendo utilizada. 
-Iremos nos aprofundar sobre `em`, `rem`, `vw` e `vh`.
+Iremos nos aprofundar sobre `em`, `rem`, `vh` e `vw`.
 
-#### Introdução <a id="introducao-medidas"></a>
+Medidas relativas servem para facilitar o desenvolvimento com os diversos dispositivos que temos atualmente.
 
-Medidas responsivas são nada
+#### Mão na massa! <a id="mao-na-massa-units"></a>
+
+Verifique o arquivo `units/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`.
+
+Unidades que você irá utilizar e suas abordagens:
+- **px**: Relacionado á 1 pixel da tela do dispositivo
+- **em**: Relacionado ao tamanho da fonte do elemento pai.
+- **rem**: Relacionado ao tamanho da fonte do `html`, o padrão é `16px`.
+- **vh**: Relacionado á 1% da altura do dispositivo.
+- **vw**: Relacionado á 1% da largura do dispositivo.
+
+Após a realização, redimensione a janela e perceba a diferença entre como os valores absolutos e relativos reagem em relação ao espaço disponível.
+
+Um ponto importante é perceber que `em` se relaciona somente com a div anterior, vimos que na sua primeira definição da classe foi deifnido `14px` ou seja, `2em` resulta em `28px` e `3em` resulta `56px`, enquanto `rem` só se preocupa em relação ao que foi definido no `html`, por padrão é 16px
+
+![Imagem no devtools]()
+
+* * *
 
 ### CSS Grid
 
@@ -92,7 +111,7 @@ Caso tenha dúvida, lembre-se:
 - Quero tratar somente linha ou coluna: Utilize `display: flex`
 - Quero controlar linha e coluna: Utilize `display: grid` 
 
-Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_priorize sempre em simplificar seu código_ :)), mas o conteúdo abordado será focado exclusivamente na utilização do `display: grid`
+Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_priorize sempre em simplificar seu código_ 😃), mas o conteúdo abordado será focado exclusivamente na utilização do `display: grid`
 
 #### Mão na massa! <a id="mao-na-massa-grid"></a>
 

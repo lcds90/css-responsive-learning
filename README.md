@@ -35,9 +35,7 @@ Você possui duas opções:
 
 - Utilizar unidades corretas e fluidas para facilitar layouts responsivos.
 - Utilizar `CSS Grid` para realizar layouts complexos.
-- Quando utilizar `position` com `absolute` e `relative` e display: `flex` ou `grid`.
-- Utilizar técnica mobile-first.
-- Utilizar media queries para se adaptar com dispositivos gerais.
+- Utilizar a técnica mobile-first e as media queries para se adaptar com dispositivos gerais.
 - Juntar os conceitos aplicados relacionado á resposnvidade em uma aplicação.
 
 * * *
@@ -121,7 +119,6 @@ Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_pr
 
 - Todos nodes filhos de um elemento com display:grid, sempre irão ser items de grid explicitamente
 - A declaração direta é chamada de implicit grid
-- Utilizando a propriedade `auto` ele se auto ajusta com espaço que lhe fica disponível
 - Os números em relação ao grid não significa a coluna em si, mas sim o começo e aonde termina
 
 ```html
@@ -178,6 +175,7 @@ Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_pr
 - Opte pelas medidas de frações, pois elas realizam o calculo automatico para nós
 - A definição do grid-auto-rows por padrão é 1fr ao declarar o display: grid
 - A propriedade `auto` ocupa somente o espaço restante referente aos calculos dado.
+- A propriedade gap serve para criar espaçamento entre os itens da coluna.
 
 [Vídeo explicativo sobre o conceito de utilizar fr](https://www.youtube.com/watch?v=Dp7kOWhAjuo)
 
@@ -193,8 +191,7 @@ Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_pr
 
 - A função repeat evita repetição desnecessária em relação a quantidade de elementos definidos
 - Podemos utilizar da melhor forma que for convecional ao código.
-
-
+> coluna: grid-column / linha: grid-row
 
 ```css
  .exemplo {
@@ -209,20 +206,59 @@ Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_pr
 ```
 ##### 06 - Tamanho de itens do grid
 
-- Não podemos definir o width explicito no grid item
-- Pois todos os itens são afetados pela explicidade
-- Para alterar a quantidade de colunas ocupadas, utilizados a propriedade span
-> coluna: grid-column / linha: grid-row
+- Não podemos definir o width explicito (500px) no grid item, pois todos os itens são afetados pela explicidade
+- Para alterar a quantidade de colunas/linhas ocupadas, utilizamos a propriedade span e logo em seguida a quantidade.
+- Para a coluna usamos `grid-column` e para as linhas usamos `grid-row`.
 
 ```css
- .exemplo {
+ .exemplo-item {
    grid-column: span 3;
    grid-row: span 2;
-   height:100%;
  }
 ```
 
-##### 07 - 
+##### 07 - Organinzando itens no grid
+
+- Diferente do `span`, podemos dizer exatamente onde queremos que nosso item comece no grid.
+- Para a coluna usamos `grid-column` e para as linhas usamos `grid-row`.
+- Quando colocamos um *valor positivo*
+   - Coluna: começa da *esquerda para direita*
+   - Linha: começa de *cima para baixo*
+- Quando há um *valor negativo*
+   - Coluna: começa da *direta para a esquerda*.
+   - Linha: começa de *baixo para cima*.
+
+
+**IMPORTANTE**: Essa definição só funciona em relação a quantidade do que foi declarado *explicitamente*, tendo em consideração o exemplo abaixo imagine que um item extra surge e com isso uma nova linha é gerada, a declaração `-1` só irá contar a partir da `terceira` para trás e não é inclusa a última gerada automaticamente pelo navegador.
+
+![devtools grid](devtools)
+
+```css
+
+ .exemplo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+ }
+
+ .exemplo-item {
+   /* 
+   grid-column-start: 1;
+   grid-column-end: 3;
+   utilize o shorthand: inicio / fim
+   */
+   grid-column: 1 / 4; /* Ocupara todo o espaço disponível */
+/* grid-column: 1 / -1 Começa do primeiro item até o último, -2 = penúltimo e assim por diante */
+ }
+```
+##### 08 - Propriedades reservadas
+
+- auto-fill: irá criar colunas implicitas para encaixar o item desejado caso o mesmo esteja como último elemento
+- auto-fit: os itens irão se ajeitar de acordo com as colunas pré definidas e não irá criar nenhuma coluna extra para o tal feito.
+- fit-content: aqui você pode definir o máximo que o item poderá alcançar em questão de tamanho, não é comumente usada, porém ela é semelhante ao `minmax`, porém o mínimo será o valor de `0`
+- minmax: como a própria declaração já deixa explicita, você iŕa definir o valor mínimo logo em seguida o máximo que ela pode alcançar.
+
+Como essas propriedades **são tãooooo poderosas**, são capazes de deixar nosso layout responsivo sem ao menos declarar alguma media query para conseguir tal feito.
 
 * * *
 
@@ -275,16 +311,19 @@ Reset em valores padrões do CSS
 }
 ```
 
-
-Tecnica de fonte responsiva
+Tecnica de fonte responsiva, isso serve para ter uma visualização melhor no código e fixar um padrão no desenvolvimento.
 ```css
    /* A cada 1rem será considerada 10px */
    html {
       font-size: 62.5%
    }
-   /* Isso serve para ter uma visualização melhor no código e fixar um padrão no desenvolvimento */
+
    body {
-      font-size: 1.6rem
+      font-size: 1.6rem /* 16 pixels */
+   }
+
+   p {
+      font-size: 2.4rem /* 24 pixels */
    }
 ```
 

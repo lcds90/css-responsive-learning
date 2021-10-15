@@ -264,17 +264,21 @@ Como essas propriedades **são tãooooo poderosas**, são capazes de deixar noss
 
 #### Mão na massa! <a id="mao-na-massa-grid"></a>
 
-Cada pasta `exercise` contém um arquivo `index.html` e `style.css` `grids/exercises1/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`.
+Cada pasta `exercise` contém um arquivo `index.html` e `style.css` `grids/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`.
 
 Unidades que você irá utilizar e suas abordagens:
 - **fr**: Relacionado á fração do elemento disponível.
 
 Após a realização, redimensione a janela e perceba a diferença entre como os valores absolutos e relativos reagem em relação ao espaço disponível.
 
-Um ponto importante é perceber que `em` se relaciona somente com a div anterior, vimos que na sua primeira definição da classe foi deifnido `14px` ou seja, `2em` resulta em `28px` e `3em` resulta `56px`, enquanto `rem` só se preocupa em relação ao que foi definido no `html`, por padrão é 16px
+Um ponto importante é perceber que `em` se relaciona somente com a div anterior, vimos que na sua primeira definição da classe foi deifnido `14px` ou seja, `2em` resulta em `28px` e `3em` resulta `56px`, enquanto `rem` só se preocupa em relação ao que foi definido no `html`, por padrão é `16px`.
 
+* * *
 
 ### Conceitos de responsividade
+
+Práticas que reutilizamos nos projetos para poder aplicar os conceitos abordados.
+[Caso queira salvar, deixei um gist disponível com essas anotações](https://gist.github.com/lcds90/bf546b1174d9ad674604647627372125).
 
 Layout Fixo
 `px` - Pixels
@@ -330,6 +334,8 @@ Tecnica de fonte responsiva, isso serve para ter uma visualização melhor no c�
 Opte sempre por imagens SVG quando há opção pois elas oferecem alta resolução independente do dispositivo.
 
 ### Referências
+
+Exercícios são de autoria própria, porém todo conteúdo abordado pode ser consultado nas seguintes referências:
 
 - [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS Grid - Responsive Trash Course](https://www.youtube.com/watch?v=SPFDLHNm5KQ)

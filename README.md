@@ -1,4 +1,4 @@
-# Boas vindas ao repositório do projeto de CSS Responsivo!
+# CSS Responsivo por Leonardo Santos
 
 # Sumário
 
@@ -17,7 +17,7 @@
 
 * * *
 
-## O que vamos aprender?
+## O que você vai desenvolver?
 
 Nesse projeto iremos desenvolver a capacidade de construir layouts utilizando a ténica que é disponibilizada através do modo de grade(grid), aprender sobre posicionamentos, e com a utilização das media queries para criarmos layouts que sejam complexos porém com facilidade e consistência entre os navegadores.
 
@@ -265,6 +265,8 @@ Como essas propriedades **são tãooooo poderosas**, são capazes de deixar noss
 
 #### Mão na massa! <a id="mao-na-massa-grid"></a>
 
+O ideal agora é se atentar aos arquivos `template.html` e `template.css`, eles já contém a solução pronta porém o ideal será você primeiro analisar o código escrito, logo após isso reproduza esse mesmo exemplo nos arquivos `index.html` e `style.css` deixando o html semântico e sinta-se a vontade para aplicar classes e outras abordagens, porém é necessário seguir o layout desejado. 
+
 Cada pasta `exercise` contém um arquivo `index.html` e `style.css` `grids/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`.
 
 Unidades que você irá utilizar e suas abordagens:
@@ -277,6 +279,8 @@ Um ponto importante é perceber que `em` se relaciona somente com a div anterior
 * * *
 
 ### Conceitos de responsividade
+
+Vamos entender um pouco melhor sobre a questão do mobile-first, o ideal agora é se atentar aos arquivos `template.html` e `template.css`, eles já contém a solução pronta porém o ideal será você primeiro irá descomentar e se atente as mudanças que ocorrem em sua página (isso te criará uma noção melhor de como o fluxo acontece), logo após isso reproduza esse mesmo exemplo nos arquivos `index.html` e `style.css` deixando o html semântico e sinta-se a vontade para aplicar classes e outras abordagens, porém é necessário seguir o layout desejado. 
 
 Práticas que reutilizamos nos projetos para poder aplicar os conceitos abordados.
 [Caso queira salvar, deixei um gist disponível com essas anotações](https://gist.github.com/lcds90/bf546b1174d9ad674604647627372125).
@@ -316,21 +320,35 @@ Reset em valores padrões do CSS.
 
 Tecnica de fonte responsiva, isso serve para ter uma visualização melhor no código e fixar um padrão no desenvolvimento.
 ```css
-   /* A cada 1rem será considerada 10px */
-   html {
-      font-size: 62.5%
-   }
+/* A cada 1rem será considerada 10px */
+html {
+   font-size: 62.5%
+}
+body {
+   font-size: 1.6rem /* 16 pixels */
+}
+p {
+   font-size: 2.4rem /* 24 pixels */
+}
+```
 
-   body {
-      font-size: 1.6rem /* 16 pixels */
-   }
+Quando utilizamos a propriedade 100vw, é contabilizado junto o scrollbar do navegador, retire a propriedade max-width e conseguirá observar esse efeito, com ela aplicada conseguimos delimitar somente o que é referente ao corpo do documento.
+```css
 
-   p {
-      font-size: 2.4rem /* 24 pixels */
-   }
+.container {
+  width: 100vw;
+  max-width: 100%;
+}
+
 ```
 
 Opte sempre por imagens SVG quando há opção pois elas oferecem alta resolução independente do dispositivo.
+
+### Agradecimentos 
+
+Espero que tenham gostado, e lembrando que isso só foi um simples conteúdo para abordar o tema, o mais importante de tudo é sempre a prática pois exercitar eles serão necessário para o seu desenvolvimento com layouts, segue abaixo todas as referências sobre o assunto por profissionais e inclusive um curso disponibilizado a respeito do assunto.
+
+Sinta-se livre em oferecer qualquer feedback e sugestões para o desenvolvimento desse projeto.
 
 ### Referências
 

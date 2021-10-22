@@ -298,14 +298,12 @@ Texto fluidos
 `em` - multiplicado pelo pai 
 `rem` - multiplicado pelo root (body, no devtools em `computed` podemos inspecionar o font-size que vai estar 16px)
 
-Esse metadado é responsável para distribuir os valores para nosso css
-
+[Metadado responsável](https://www.w3schools.com/css/css_rwd_viewport.asp) para distribuir os valores para ser calculado o viewport
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-Reset em valores padrões do CSS
-
+Reset em valores padrões do CSS.
 ```css
 * {
    box-sizing: border-box;

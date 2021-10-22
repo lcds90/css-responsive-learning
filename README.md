@@ -68,7 +68,7 @@ Medidas relativas servem para facilitar o desenvolvimento com os diversos dispos
 
 #### Mão na massa! <a id="mao-na-massa-units"></a>
 
-Verifique o arquivo `units/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`.
+Verifique o arquivo `units/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`, os resultados estarão no arquivo `gabarito.css`.
 
 Unidades que você irá utilizar e suas abordagens:
 - **px**: Relacionado á 1 pixel da tela do dispositivo
@@ -265,9 +265,9 @@ Como essas propriedades **são tãooooo poderosas**, são capazes de deixar noss
 
 #### Mão na massa! <a id="mao-na-massa-grid"></a>
 
-O ideal agora é se atentar aos arquivos `template.html` e `template.css`, eles já contém a solução pronta porém o ideal será você primeiro analisar o código escrito, logo após isso reproduza esse mesmo exemplo nos arquivos `index.html` e `style.css` deixando o html semântico e sinta-se a vontade para aplicar classes e outras abordagens, porém é necessário seguir o layout desejado. 
+O ideal agora é se atentar aos arquivos `template.html` e `template.css`, eles já contém a solução pronta porém o ideal será você primeiro analisar o código escrito, logo após isso reproduza esse mesmo exemplo nos arquivos `index.html` e `style.css`, sinta-se a vontade para aplicar classes e outras abordagens, porém é necessário seguir o layout desejado. 
 
-Cada pasta `exercise` contém um arquivo `index.html` e `style.css` `grids/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`.
+Cada pasta `exercise` contém um arquivo `index.html` e `style.css` e realize as mudanças conforme indicadas nos comentários com `NOTE`, os resultados estão disponibilizados no arquivo `gabarito.css`.
 
 Unidades que você irá utilizar e suas abordagens:
 - **fr**: Relacionado á fração do elemento disponível.
@@ -280,7 +280,7 @@ Um ponto importante é perceber que `em` se relaciona somente com a div anterior
 
 ### Conceitos de responsividade
 
-Vamos entender um pouco melhor sobre a questão do mobile-first, o ideal agora é se atentar aos arquivos `template.html` e `template.css`, eles já contém a solução pronta porém o ideal será você primeiro irá descomentar e se atente as mudanças que ocorrem em sua página (isso te criará uma noção melhor de como o fluxo acontece), logo após isso reproduza esse mesmo exemplo nos arquivos `index.html` e `style.css` deixando o html semântico e sinta-se a vontade para aplicar classes e outras abordagens, porém é necessário seguir o layout desejado. 
+Vamos entender um pouco melhor sobre a questão do mobile-first, o ideal agora é se atentar aos arquivos `template.html` e `template.css`, eles já contém a solução pronta porém o ideal será você primeiro descomentar linha e por linha e se atente as mudanças que ocorrem em sua página (isso te criará uma noção melhor de como o fluxo acontece), logo após isso reproduza esse mesmo exemplo nos arquivos `index.html` e `style.css` deixando o html semântico e sinta-se a vontade para aplicar classes e outras abordagens, porém é necessário seguir o layout desejado. 
 
 Práticas que reutilizamos nos projetos para poder aplicar os conceitos abordados.
 [Caso queira salvar, deixei um gist disponível com essas anotações](https://gist.github.com/lcds90/bf546b1174d9ad674604647627372125).
@@ -332,7 +332,8 @@ p {
 }
 ```
 
-Quando utilizamos a propriedade 100vw, é contabilizado junto o scrollbar do navegador, retire a propriedade max-width e conseguirá observar esse efeito, com ela aplicada conseguimos delimitar somente o que é referente ao corpo do documento.
+Quando utilizamos a propriedade 100vw, é contabilizado junto o scrollbar do navegador, retire 
+a propriedade max-width e conseguirá observar esse efeito, com ela aplicada conseguimos delimitar somente o que é referente ao corpo do documento.
 ```css
 
 .container {

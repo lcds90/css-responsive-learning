@@ -2,8 +2,8 @@
 
 # Sumário
 
-- [O que vamos aprender?](#-o-que-vamos-aprender)
-- [Você será capaz de](#voce-sera-capaz-de)
+- [O que vamos aprender?](#-o-que-voce-vai-desenvolver)
+- [Iremos exercitar os seguinte conceitos](#iremos-exercitar-os-seguinte-conceitos)
 - [Porque isso é importante?](#porque-isso-e-importante)
 - [Conteúdos](#conteudos)
   - [Unidades absolutas e relativas](#unidade-absolutas-e-relativas)

@@ -231,7 +231,8 @@ Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_pr
 
 **IMPORTANTE**: Essa definição só funciona em relação a quantidade do que foi declarado *explicitamente*, tendo em consideração o exemplo abaixo imagine que um item extra surge e com isso uma nova linha é gerada, a declaração `-1` só irá contar a partir da `terceira` para trás e não é inclusa a última gerada automaticamente pelo navegador.
 
-![devtools grid](devtools)
+![devtools grid](assets/devtools.png)
+![devtools grid](assets/devtools2.png)
 
 ```css
 

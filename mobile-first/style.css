@@ -1,0 +1,35 @@
+.layout {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.div-image {
+    display: grid;
+    grid: 1fr / repeat(auto-fit, minmax(25rem, 1fr));
+    place-items: center;
+}
+
+.div-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* SECTION Forma 1
+.div-image {
+  display: grid;
+  grid: 1fr / repeat(auto-fit, minmax(25rem, 1fr));
+  place-items: center;
+}
+
+@media screen and (min-width: 768px){
+  .div-image {
+    grid: 1fr / repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .div-image {
+        grid: 1fr / repeat(3, 1fr);
+    }
+} */

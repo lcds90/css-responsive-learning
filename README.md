@@ -12,7 +12,8 @@
   - [CSS Grid](#css-grid)
     - [Introdução](#introducao-grid)
     - [Mão na massa](#mao-na-massa-grid)
-- [Vamos praticar!](#vamos-praticar)
+- [Conceitos de responsividade](#conceitos-de-responsividade)
+- [Agradecimentos](#agradecimentos)
 - [Recursos Adicionais](#recursos-adicionais)
 
 * * *

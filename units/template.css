@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #61dafb;
+  }
+  
+  hr {
+    margin-block: 25px;
+  }
+  
+  .absolute-unit:nth-of-type(1),
+  .relative-unit-w:nth-of-type(1),
+  .relative-unit-h:nth-of-type(1),
+  .font-size-em:nth-of-type(1) {
+    background: red;
+  }
+  
+  .absolute-unit:nth-of-type(2),
+  .relative-unit-w:nth-of-type(2),
+  .relative-unit-h:nth-of-type(2),
+  .font-size-em > div {
+    background: yellow;
+  }
+  
+  .absolute-unit:nth-of-type(3),
+  .relative-unit-w:nth-of-type(3),
+  .relative-unit-h:nth-of-type(3),
+  .font-size-em > div > div {
+    background: green;
+  }
+  
+  .absolute-unit:nth-of-type(4),
+  .relative-unit-w:nth-of-type(4),
+  .relative-unit-h:nth-of-type(4),
+  .font-size-rem {
+    background: orange;
+  }
+  
+  /* NOTE Mude somente a partir daqui */
+  
+  /* SECTION Unidade de Medidas Absolutas */
+  
+  .absolute-unit:nth-of-type(1) {
+    width: 50px;
+    height: 50px;
+  }
+  .absolute-unit:nth-of-type(2) {
+    width: 150px;
+    height: 150px;
+  }
+  .absolute-unit:nth-of-type(3) {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .absolute-unit:nth-of-type(4) {
+    width: 500px;
+    height: 500px;
+  }
+  
+  /* !SECTION */
+  /* SECTION Unidade de Medidas Relativas */
+  
+  .relative-unit-w:nth-of-type(1) {
+    width: 25vw;
+  }
+  .relative-unit-w:nth-of-type(2) {
+    width: 50vw;
+  }
+  .relative-unit-w:nth-of-type(3) {
+    width: 75vw;
+  }
+  .relative-unit-w:nth-of-type(4) {
+    width: 100vw;
+  }
+  
+  .relative-unit-h:nth-of-type(1) {
+    height: 25vh;
+  }
+  .relative-unit-h:nth-of-type(2) {
+    height: 50vh;
+  }
+  .relative-unit-h:nth-of-type(3) {
+    height: 75vh;
+  }
+  .relative-unit-h:nth-of-type(4) {
+    height: 100vh;
+  }
+  
+  .font-size-em {
+    font-size: 14px;
+  }
+  
+  .font-size-em > div {
+    font-size: 2em;
+  }
+  
+  .font-size-em > div > div {
+    font-size: 3em;
+  }
+  
+  .font-size-rem {
+    font-size: 2rem;
+  }
+  
+  /* !SECTION */

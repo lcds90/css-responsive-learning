@@ -2,7 +2,7 @@
 
 # Sumário
 
-- [O que vamos aprender?](#-o-que-voce-vai-desenvolver)
+- [O que você vai desenvolver?](#-o-que-voce-vai-desenvolver)
 - [Iremos exercitar os seguinte conceitos](#iremos-exercitar-os-seguinte-conceitos)
 - [Porque isso é importante?](#porque-isso-e-importante)
 - [Conteúdos](#conteudos)

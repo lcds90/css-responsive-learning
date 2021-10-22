@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid: repeat(2, 1fr) / 2fr repeat(2, 1fr);
+  place-items: center;
+}
+
+div {
+  background: red;
+  width: 80%;
+  height: 60%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  margin:auto;
+}
+
+section > div:first-child {
+  grid-row: span 2;
+  border-radius: 100%;
+  height: 75%;
+  width: 75%;
+}

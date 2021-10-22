@@ -1,35 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* A cada 1rem será considerada 10px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem; /* 16 pixels */
+}
+
 .layout {
   width: 100vw;
   max-width: 100%;
+  font-size: 2.4rem; /* 24 pixels */
 }
 
-.div-image {
-    display: grid;
-    grid: 1fr / repeat(auto-fit, minmax(25rem, 1fr));
-    place-items: center;
-}
-
-.div-image img {
-  width: 100%;
-  height: auto;
-}
-
-
-/* SECTION Forma 1
 .div-image {
   display: grid;
-  grid: 1fr / repeat(auto-fit, minmax(25rem, 1fr));
+  /*
+    detalhe: poderiamos utilizar o auto-fit, porem como precisamos controlar o h2, é mais convencional ter certeza do que estamos definindo
+    grid: 1fr / repeat(auto-fit, minmax(25rem, 1fr));
+    */
+  grid: 1fr / 1fr;
   place-items: center;
 }
 
-@media screen and (min-width: 768px){
+.div-image img {
+  width: 90%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
   .div-image {
     grid: 1fr / repeat(2, 1fr);
+  }
+
+  h2 {
+    grid-column: span 2;
   }
 }
 
 @media screen and (min-width: 1024px) {
-    .div-image {
-        grid: 1fr / repeat(3, 1fr);
-    }
-} */
+  .div-image {
+    grid: 1fr / repeat(3, 1fr);
+  }
+
+  h2 {
+    grid-column: span 3;
+  }
+}

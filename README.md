@@ -75,12 +75,10 @@ Unidades absolutas não mudam pois não são relativas ao qualquer elemento pré
 
 
 - `px`: A opção mais comum será a unidade `px`, criada exclusivamente para o CSS que são relativas ao dispositivo de visualização.
-##### _Caso se interesse pelo assunto de impressão, estará um tópico abordando sobre o assunto._
+##### _Caso se interesse pelo assunto de impressão, estará um tópico abordando em [referências](#referências) sobre o assunto._
 
 * * *
 #### Unidades relativas
-
-> em, ex, ch, rem, lh, vw, vh, vmin, vmax
 
 Unidades relativas dependem de algo pré-definido, seja um elemento pai ou largura/altura disponível do dispositivo que a aplicação está sendo utilizada. 
 
@@ -324,23 +322,21 @@ Vamos entender um pouco melhor sobre a questão do mobile-first, o ideal agora �
 Práticas que reutilizamos nos projetos para poder aplicar os conceitos abordados.
 [Caso queira salvar, deixei um gist disponível com essas anotações](https://gist.github.com/lcds90/bf546b1174d9ad674604647627372125).
 
-Layout Fixo
-`px` - Pixels
+| Tipo   	| Modo   	| Declaração 	| Descrição                                                                                                         	|
+|--------	|--------	|------------	|-------------------------------------------------------------------------------------------------------------------	|
+| **Texto**  	| Fixo   	| 1px        	| Texto não muda, independente do dispositivo / zoom aplicado.                                                      	|
+| **Texto**  	| Fluido 	| 1em        	| Multiplicado a partir do elemento pai.                                                                            	|
+| **Texto**  	| Fluido 	| 1rem       	| Multiplicado pelo elemento root (html), padrão de 16px.                                                           	|
+| **Layout** 	| Fixo   	| 1px        	| Layout não muda, independente do dispositivo / zoom aplicado.                                                     	|
+| **Layout** 	| Fluido 	| 1%         	| Calculo a partir da porcentagem a partir do elemento pai.                                                         	|
+| **Layout** 	| Fluido 	| 1vh         	| Relativo á **1%** da **altura** do dispositivo.                                                                   	|
+| **Layout** 	| Fluido 	| 1vw         	| Relativo á **1%** da **largura** do dispositivo.                                                                  	|
+| **Layout** 	| Fluido 	| 1vmin       	| Em relação a 1% da dimensão menor da janela de visualização, ou seja depende de quem for  **menor** *vh* ou *vw*. 	|
+| **Layout** 	| Fluido 	| 1vmax       	| Em relação a 1% da dimensão menor da janela de visualização, ou seja depende de quem for **maior** *vh* ou *vw*.  	|
+| **Layout** 	| Fluido 	| 1fr         	| Relacionado á fração do elemento disponível. _Use na propriedade referente ao grid_                               	|
+| **Layout** 	| Fluido 	| auto       	| Relacionado automaticamente a partir do calculo do elemento. _Use na propriedade referente ao grid_               	|
 
-Layout Fluido
-`%` - Porcentagem
-`auto` - Automática
-`vh` - Viewport Height
-`vw` - Viewport Width
-`fr` - Fração (_Utilize no grid_)
-
-Textos fixos
-`1px` = 0.75pt
-`16px` = 12pt
-
-Texto fluidos
-`em` - multiplicado pelo pai 
-`rem` - multiplicado pelo root (body, no devtools em `computed` podemos inspecionar o font-size que vai estar 16px)
+* * *
 
 [Metadado responsável](https://www.w3schools.com/css/css_rwd_viewport.asp) para distribuir os valores para ser calculado o viewport
 ```html
@@ -359,9 +355,9 @@ Reset em valores padrões do CSS.
 
 Tecnica de fonte responsiva, isso serve para ter uma visualização melhor no código e fixar um padrão no desenvolvimento.
 ```css
-/* A cada 1rem será considerada 10px */
+
 html {
-   font-size: 62.5%
+   font-size: 62.5% /* A cada 1rem será considerada 10px */
 }
 body {
    font-size: 1.6rem /* 16 pixels */
@@ -400,7 +396,7 @@ Exercícios são de autoria própria, porém todo conteúdo abordado pode ser co
 - [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS Units W3 Schools](https://www.w3schools.com/css/css_units.asp)
 
-### CSS Grid
+#### CSS Grid
 
 - [CSS Grid - Responsive Trash Course](https://www.youtube.com/watch?v=SPFDLHNm5KQ)
 - [Desvendando o CSS Grid na prática | Mayk Brito](https://www.youtube.com/watch?v=HN1UjzRSdBk)
@@ -423,3 +419,4 @@ Exercícios são de autoria própria, porém todo conteúdo abordado pode ser co
 - [Table Layout](https://www.tutorialrepublic.com/codelab.php?topic=html&file=table-layout)
 - [Semantic Website Layout with Float](https://www.tutorialrepublic.com/codelab.php?topic=html5&file=semantic-website-layout)
 - [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Markdown Tables](https://www.tablesgenerator.com/markdown_tables)

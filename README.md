@@ -1,4 +1,4 @@
-# CSS Responsivo por Leonardo Santos
+# Um guia sobre CSS Responsivo
 
 # Sumário
 

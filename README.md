@@ -2,11 +2,11 @@
 
 # Sumário
 
-- [O que você vai desenvolver?](#-o-que-voce-vai-desenvolver)
-- [Iremos exercitar os seguinte conceitos](#iremos-exercitar-os-seguinte-conceitos)
-- [Porque isso é importante?](#porque-isso-e-importante)
+- [Sobre o projeto](#sobre-o-projeto)
+- [Orientações](#orientações)
+- [Conceitos](#conceitos)
 - [Conteúdos](#conteudos)
-  - [Unidades absolutas e relativas](#unidade-absolutas-e-relativas)
+  - [Unidades absolutas e relativas](#unidades-absolutas-e-relativas)
     - [Introdução](#introducao-units)
     - [Mão na massa](#mao-na-massa-units)
   - [CSS Grid](#css-grid)
@@ -14,17 +14,17 @@
     - [Mão na massa](#mao-na-massa-grid)
 - [Conceitos de responsividade](#conceitos-de-responsividade)
 - [Agradecimentos](#agradecimentos)
-- [Recursos Adicionais](#recursos-adicionais)
+- [Referências](#referências)
 
 * * *
 
-## O que você vai aprender?
+## Sobre o projeto
 
 Nesse projeto iremos desenvolver a capacidade de construir layouts utilizando a ténica que é disponibilizada através do modo de grade(grid), aprender sobre posicionamentos, e com a utilização das media queries para criarmos layouts que sejam complexos porém com facilidade e consistência entre os navegadores.
 
 Siga as instruções indicadas nos arquivos junto com o material de referência para entendimento do conteúdo.
 
-### Antes de começar a desenvolver:
+### Orientações:
 
 Você possui duas opções: 
 - Realizar um clone do repositório e realizar um `push`.
@@ -33,7 +33,7 @@ Você possui duas opções:
 
 * * *
 
-### Iremos exercitar os seguinte conceitos
+### Conceitos
 
 - Utilizar unidades corretas e fluidas para facilitar layouts responsivos.
 - Utilizar `CSS Grid` para realizar layouts complexos.
@@ -420,6 +420,6 @@ Exercícios são de autoria própria, porém todo conteúdo abordado pode ser co
 
 - [Entendendo sobre position no CSS](https://www.youtube.com/watch?v=Y7NeqpwLM2g)
 - [Layout com tabela e float](https://www.tutorialrepublic.com/html-tutorial/html-layout.php)
-- [Table Layout](hhttps://www.tutorialrepublic.com/codelab.php?topic=html&file=table-layout)
+- [Table Layout](https://www.tutorialrepublic.com/codelab.php?topic=html&file=table-layout)
 - [Semantic Website Layout with Float](https://www.tutorialrepublic.com/codelab.php?topic=html5&file=semantic-website-layout)
 - [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)

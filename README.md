@@ -102,7 +102,7 @@ Todas essas medidas, você irá utilizar em telas, pois seu uso foi criado justa
 
 * * *
 
-#### Mão na massa! <a id="mao-na-massa-units"></a>
+### Mão na massa! <a id="mao-na-massa-units"></a>
 
 Verifique o arquivo `units/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`, os resultados estarão no arquivo `gabarito.css`.
 
@@ -117,6 +117,8 @@ Após a realização, redimensione a janela e perceba a diferença entre como os
 
 Um ponto importante é perceber que `em` se relaciona somente com a div anterior, vimos que na sua primeira definição da classe foi deifnido `14px` ou seja, `2em` resulta em `28px` e `3em` resulta `56px`, enquanto `rem` só se preocupa em relação ao que foi definido no `html`, por padrão é 16px
 
+
+##### Visualização do devtools em relação ao tamanho de fonte padrão do navegador no Google Chrome.
 [<img src="./assets/fontsize.gif" width="100%"/>](assets/fontsize.gif 'Gif mostrando tamanho da fonte padrão no navegador através do dev tools')
 
 * * *
@@ -136,16 +138,17 @@ Agora imagine o trabalho não só para construir mas para quando quisesse fazer 
 
 Mas queremos aqui, que você venha dar uma chance para nossas aplicações estarem bonitas (~~e com isso você não perder nenhum fio de cabelo~~). 
 Hoje em dia já possuímos o método de layout através [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), que foi um divisor na web em relação aos métodos passados com criação de layout, mas algo em relação a diferença do grid está no seguinte fator:
+
 - Flexbox: **Unidirecional**, *tratamos somente um eixo, somente horizontal ou vertical, ele é baseado no conteúdo dos itens* (a definição do tamanho do item, é definido no próprio item)
 - Grid: **Bidrecional**, *conseguimos tratar os dois eixos horizontal e vertical, ele é baseado na definição do container* (a definição do tamanho dos itens, é feito no elemento pai)
 
 > [Exemplo sobre a explicação acima](https://x-team.com/blog/css-grid-vs-flexbox/)
 
 Caso tenha dúvida, lembre-se:
-- Quero tratar somente linha ou coluna: Utilize `display: flex`
-- Quero controlar linha e coluna: Utilize `display: grid` 
+- Quero tratar somente linha ou coluna: Utilize `display: flex`.
+- Quero controlar linha e coluna: Utilize `display: grid`.
 
-Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_priorize sempre em simplificar seu código_ 😃), mas o conteúdo abordado será focado exclusivamente na utilização do `display: grid`
+Nada te impede de utilzar o grid caso queira tratar somente linha ou coluna (_priorize sempre em simplificar seu código_ 😃), mas o conteúdo abordado será focado exclusivamente na utilização do `display: grid`.
 
 * * *
 
@@ -417,3 +420,6 @@ Exercícios são de autoria própria, porém todo conteúdo abordado pode ser co
 
 - [Entendendo sobre position no CSS](https://www.youtube.com/watch?v=Y7NeqpwLM2g)
 - [Layout com tabela e float](https://www.tutorialrepublic.com/html-tutorial/html-layout.php)
+- [Table Layout](hhttps://www.tutorialrepublic.com/codelab.php?topic=html&file=table-layout)
+- [Semantic Website Layout with Float](https://www.tutorialrepublic.com/codelab.php?topic=html5&file=semantic-website-layout)
+- [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)

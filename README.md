@@ -18,7 +18,7 @@
 
 * * *
 
-## O que você vai desenvolver?
+## O que você vai aprender?
 
 Nesse projeto iremos desenvolver a capacidade de construir layouts utilizando a ténica que é disponibilizada através do modo de grade(grid), aprender sobre posicionamentos, e com a utilização das media queries para criarmos layouts que sejam complexos porém com facilidade e consistência entre os navegadores.
 
@@ -29,6 +29,7 @@ Siga as instruções indicadas nos arquivos junto com o material de referência 
 Você possui duas opções: 
 - Realizar um clone do repositório e realizar um `push`.
 - Realizar um `fork` deste repositório. (Caso queira consigo acompanhar mais facilmente caso tenha alguma dificuldade.)
+- Instale a extensão Name: [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), você irá precisar dela para executar o arquivo `index.html` no diretório raiz.
 
 * * *
 
@@ -46,37 +47,71 @@ Você possui duas opções:
 Vamos nos aprofundar na mágia do CSS \o/.
 É muito importante praticar cada tópico para entendimento pois a junção de todos garante a melhor flexibilidade para o CSS responsivo acontecer.
 
+* * *
+
 ### Unidades absolutas e relativas
 
 #### Introdução <a id="introducao-units"></a>
 
-Você já deve ter percebido que no desenvolvimento web, trabalhamos com bastante unidade de medidas. O príncipio na responsividade é trabalharmos com unidades relativas, pois elas oferecem melhor flexibilidade para construir nosso layout. Mas vamos entender cada uma que podemos utilizar em nossa aplicação.
+Você já deve ter percebido que no desenvolvimento web, trabalhamos com bastante unidade de medidas.
+E o CSS oferece vários tipos de unidades diferentes para utilizarmos, e elas **sempre estarão relacionadas com a mídia de saída** seja ela em _tela ou impresso_.
 
-##### Unidades absolutas
+O príncipio na responsividade é trabalharmos com unidades relativas, pois elas oferecem melhor flexibilidade para construir nosso layout. Mas vamos entender cada uma que podemos utilizar em nossa aplicação.
 
-> cm, mm, Q, in, pc, pt, px
+* * *
 
-Unidades absolutas não mudam pois não são relativas ao qualquer elemento pré-definido, e sempre serão o mesmo tamanho ao qual foi definido. A opção mais comum será a unidade `px`.
+#### Unidades absolutas
 
-##### Unidades relativas
+Unidades absolutas não mudam pois não são relativas ao qualquer elemento pré-definido, e *sempre* serão o mesmo tamanho ao qual foi definido, tenha em mente que no dia-a-dia para telas você irá usar o pixels ocasionalmente.
+
+| Declaração 	| Nome                      	| Equivalente (px) 	| Uso recomendado para	|
+|------------	|---------------------------	|------------------	|-----------------	|
+| cm         	| Centimeters (Centimetros) 	| 38px             	| Impressão       	| 
+| mm         	| Millimeters (Milímetros)   	| 3.8px             	| Impressão         	|
+| in         	| Inches (Polegadas)   	| 96px             	| Impressão         	|
+| pc         	| Picas (Paica)   	| 16px             	| Impressão         	|
+| pt         	| Points (Pontos)   	| 1.3px             	| Impressão         	|
+| px         	| Pixels   	| 1px             	| Tela         	|
+
+
+- `px`: A opção mais comum será a unidade `px`, criada exclusivamente para o CSS que são relativas ao dispositivo de visualização.
+##### _Caso se interesse pelo assunto de impressão, estará um tópico abordando sobre o assunto._
+
+* * *
+#### Unidades relativas
 
 > em, ex, ch, rem, lh, vw, vh, vmin, vmax
 
 Unidades relativas dependem de algo pré-definido, seja um elemento pai ou largura/altura disponível do dispositivo que a aplicação está sendo utilizada. 
-Iremos nos aprofundar sobre `em`, `rem`, `vh` e `vw`.
 
-Medidas relativas servem para facilitar o desenvolvimento com os diversos dispositivos que temos atualmente.
+Medidas relativas servem para facilitar o desenvolvimento com os diversos dispositivos que temos atualmente pois são *diversas opções fornecidas pelo mercado em geral*.
+
+| Declaração	| Equivalente 	|
+|------------	|------------------	|
+| em          	| Relacionado ao tamanho da fonte do elemento pai     	| 
+| ex          	| Relativo à altura x da fonte atual. (_Raramente usado_)    	| 
+| ch          	| Relativo à largura do caractere zero **0**. (_Raramente usado_)    	| 
+| lh          	| Relativo à altura da linha do elemento, propriedade _line height_. (_Raramente usado_)    	| 
+| rem          	| Relativo ao tamanho da fonte do `html`, o padrão é `16px`.    	| 
+| vh          	| Relativo á **1%** da **altura** do dispositivo.    	| 
+| vw          	| Relativo á **1%** da **largura** do dispositivo.   	| 
+| vmin          	| Em relação a 1% da dimensão menor da janela de visualização, ou seja depende de quem for **menor** *vh* ou *vw*.    	| 
+| vmax          	| Em relação a 1% da dimensão menor da janela de visualização, ou seja depende de quem for **maior** *vh* ou *vw*.    	| 
+
+Todas essas medidas, você irá utilizar em telas, pois seu uso foi criado justamente para isso. Iremos nos aprofundar sobre `em`, `rem`, `vh` e `vw`.
+
+* * *
 
 #### Mão na massa! <a id="mao-na-massa-units"></a>
 
 Verifique o arquivo `units/index.html` e realize as mudanças conforme indicadas nos comentários com `NOTE`, os resultados estarão no arquivo `gabarito.css`.
 
 Unidades que você irá utilizar e suas abordagens:
-- **px**: Relacionado á 1 pixel da tela do dispositivo
-- **em**: Relacionado ao tamanho da fonte do elemento pai.
-- **rem**: Relacionado ao tamanho da fonte do `html`, o padrão é `16px`.
-- **vh**: Relacionado á 1% da altura do dispositivo.
-- **vw**: Relacionado á 1% da largura do dispositivo.
+- **px**: Relativo á 1 pixel da tela do dispositivo
+- **em**: Relativo ao tamanho da fonte do elemento pai.
+- **rem**: Relativo ao tamanho da fonte do `html`, o padrão é `16px`.
+- **vh**: Relativo á 1% da altura do dispositivo.
+- **vw**: Relativo á 1% da largura do dispositivo.
 
 Após a realização, redimensione a janela e perceba a diferença entre como os valores absolutos e relativos reagem em relação ao espaço disponível.
 
@@ -356,15 +391,29 @@ Sinta-se livre em oferecer qualquer feedback e sugestões para o desenvolvimento
 
 Exercícios são de autoria própria, porém todo conteúdo abordado pode ser consultado nas seguintes referências:
 
+#### Unidade de Medidas
+
+- [Unidades de Medidas](https://www.w3.org/Style/Examples/007/units.pt_BR.html)
 - [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS Units W3 Schools](https://www.w3schools.com/css/css_units.asp)
+
+### CSS Grid
+
 - [CSS Grid - Responsive Trash Course](https://www.youtube.com/watch?v=SPFDLHNm5KQ)
 - [Desvendando o CSS Grid na prática | Mayk Brito](https://www.youtube.com/watch?v=HN1UjzRSdBk)
-- [Responsividade na Prática | Masterclass #08](https://www.youtube.com/watch?v=H91DhKPjhPk)
 - [The FR unit — Fractional units in CSS grid](https://www.youtube.com/watch?v=Dp7kOWhAjuo)
-- [Media Queries e Breakpoints: o Básico e Fundamental](https://www.youtube.com/watch?v=gYak6y7rbRw)
-- [Entendendo sobre position no CSS](https://www.youtube.com/watch?v=Y7NeqpwLM2g)
 - [CSS Grid Layout e Flexbox - Quando Utilizar](https://www.youtube.com/watch?v=x-4z_u8LcGc&)
 - [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- [Layout com tabela e float](https://www.tutorialrepublic.com/html-tutorial/html-layout.php)
 - [CSS Grid vs Flexbox](https://x-team.com/blog/css-grid-vs-flexbox/)
 - [Curso CSS Grid](https://courses.wesbos.com/) 
+
+#### Media Queries
+
+- [Media Queries e Breakpoints: o Básico e Fundamental](https://www.youtube.com/watch?v=gYak6y7rbRw)
+- [Responsividade na Prática | Masterclass #08](https://www.youtube.com/watch?v=H91DhKPjhPk)
+- [Segredos do Media Print](https://medium.com/@larymagal/segredos-do-media-print-dcd69cef1f56)
+
+#### Outros 
+
+- [Entendendo sobre position no CSS](https://www.youtube.com/watch?v=Y7NeqpwLM2g)
+- [Layout com tabela e float](https://www.tutorialrepublic.com/html-tutorial/html-layout.php)
